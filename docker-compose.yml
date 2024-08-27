@@ -1,0 +1,13 @@
+# Use postgres/example user/password credentials
+version: '3.9'
+
+services:
+  php:
+    build: ./Dockerfile
+    image: php
+    container_name: php
+    restart: always
+    ports:
+      - 6543:80
+    volumes:
+      - ./:/var/www/html/
